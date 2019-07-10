@@ -1,0 +1,8 @@
+<article>
+<h2>{{actus.listActu[id].actuTitle}}</h2>
+<h6>{{actus.listActu[id].actuAuteur}} - {{actus.listActu[id].actuDate.toString()}}</h6>
+
+<p>{{actus.listActu[id].actuContent}}</p>
+<aside><img [src]="actus.listActu[id].actuImg"/></aside>
+<a *ngIf="ident.connected" href [routerLink]="'/edition/'+id">Modifier</a>
+</article>

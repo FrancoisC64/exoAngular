@@ -1,0 +1,22 @@
+ul li{
+    list-style:none;
+}
+ul{
+    display:flex;
+    width:50vw;
+    justify-content: space-around;
+}
+section{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    background-color:lightgrey;
+}
+a{
+    display:table-cell;
+    background-color:aquamarine;
+    border-radius: 5px;
+    padding:10px;
+    vertical-align:middle;
+    text-align:center;
+}

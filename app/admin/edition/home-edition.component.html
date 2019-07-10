@@ -1,0 +1,13 @@
+<section>
+    <select *ngIf="!isSelected" (ngModelChange)="onSelect($event)" [(ngModel)]="id">
+        <option *ngFor="let n of servNews.listActu; index as i;" [ngValue]="i">{{n.actuTitle}} {{n.actuDate}}</option>
+        <option [ngValue]="-1">Nouvelle news</option>
+    </select>
+    <form (submit)="editNews()">
+        <input name="actuTitle" [(ngModel)]="news.actuTitle" type="text" placeholder="Titre"/>
+        <textarea name="actuContent" [(ngModel)]="news.actuContent"></textarea>
+        <input name="actuAlias" [(ngModel)]="news.actuAlias" placeholder="Alias"/>
+
+        <input type="submit" value="Enregistrer"/>
+    </form>
+</section>

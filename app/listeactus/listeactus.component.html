@@ -1,0 +1,15 @@
+<section>
+    <table>
+        <thead>
+            <th>Titre</th>
+            <th>Auteur</th>
+            <th>Date</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let actu of actus.listActu;let i=index">
+                <td><a href [routerLink]="['/actualite',i]">{{i+1}} - {{actu.actuTitle}}</a></td>
+                <td>{{actu.actuAuteur}}</td>
+                <td>{{actu.actuDate.toString()}}</td></tr>
+        </tbody>
+    </table>
+</section>

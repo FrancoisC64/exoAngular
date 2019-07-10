@@ -1,0 +1,9 @@
+<section>
+    <form *ngIf="!ident.connected" (submit)="envoiConne()">
+        <input name="id" [(ngModel)]="conne.id"  type="text"/>
+        <input name="mdp" [(ngModel)]="conne.mdp" type="password"/>
+        <input type="submit" value="Connexion"/>
+        <input type="reset" value="Annuler"/>
+    </form>
+    <button *ngIf="ident.connected" type="button" (click)="onClickLogOut()">Déconnexion</button>
+</section>
